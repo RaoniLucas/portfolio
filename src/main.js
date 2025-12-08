@@ -7,7 +7,9 @@ function test() {
 test();
 
 function testHTMLElement() {
-   return `<span>Hello World</span>`;
+   const span = document.createElement("span");
+   span.textContent = "Hello World";
+   return span;
 }
 
 document.body.appendChild(testHTMLElement());
