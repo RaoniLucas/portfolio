@@ -1,0 +1,49 @@
+html {
+   scrollbar-width: thin;
+}
+
+body {
+   height: 100dvh;
+   margin: 0;
+}
+
+header {
+   height: 40px;
+   border-bottom: 1px solid black;
+}
+
+.header-container {
+   height: 100%;
+   margin: 0 20px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+#menu-button {
+   width: 20px;
+   height: 20px;
+   margin: 0;
+   padding: 0;
+   cursor: pointer;
+}
+
+.switch-container {
+   width: 40px;
+   height: 20px;
+   position: relative;
+   border: 1px solid black;
+   border-radius: 6px;
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+}
+
+.switch  {
+   width: 16px;
+   height: 16px;
+   position: absolute;
+   margin: 0 1px;
+   border: 1px solid black;
+   border-radius: 6px;
+}

@@ -6,9 +6,9 @@ function test() {
 
 test();
 
-function testHTMLElement() {
+function testHTMLElement(text = "Hello World!") {
    const span = document.createElement("span");
-   span.textContent = "Hello World";
+   span.textContent = text;
    return span;
 }
 
