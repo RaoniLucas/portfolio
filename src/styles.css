@@ -5,11 +5,29 @@ html {
 body {
    height: 100dvh;
    margin: 0;
+   transition: background-color 0.3s ease;
+}
+
+body.light {
+   background-color: #ffffff;
+   color: #000000;
+}
+
+body.dark {
+   background-color: #151515;
+   color: #ffffff;
 }
 
 header {
-   height: 40px;
-   border-bottom: 1px solid black;
+   height: 48px;
+}
+
+body.light header {
+   border-bottom: 0.5px solid black;
+}
+
+body.dark header {
+   border-bottom: 0.5px solid #ccc;
 }
 
 .header-container {
@@ -20,30 +38,81 @@ header {
    align-items: center;
 }
 
+.user-profile-container {
+   display: flex;
+   align-items: center;
+   gap: 18px;
+}
+
 #menu-button {
-   width: 20px;
-   height: 20px;
+   background-color: transparent;
+   width: 30px;
+   height: 30px;
    margin: 0;
+   border: none;
+   border-radius: 6px;
    padding: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
    cursor: pointer;
+}
+
+body.light #menu-button:hover {
+   background-color: #dedede;
+}
+body.dark #menu-button:hover {
+   background-color: #212121;
+}
+
+body.dark #border-menu-icon {
+   stroke: white;
+}
+body.dark #line-menu-icon {
+   fill: white;
+}
+body.dark .details-menu-icon {
+   fill: white;
 }
 
 .switch-container {
    width: 40px;
    height: 20px;
    position: relative;
-   border: 1px solid black;
    border-radius: 6px;
    display: flex;
    align-items: center;
    cursor: pointer;
+   transition: background-color 0.3s ease;
 }
 
-.switch  {
+body.light .switch-container{
+   background-color: #f0f0f0;
+   border: 1px solid black;
+}
+
+body.dark .switch-container {
+   background-color: #333333;
+   border: 1px solid #ccc;
+}
+
+.switch {
    width: 16px;
    height: 16px;
    position: absolute;
    margin: 0 1px;
+   border-radius: 4px;
+   transition: left 0.3s ease, background-color 0.3s ease;
+}
+
+.switch.light {
+   left: 0;
+   background-color: #ffffff;
    border: 1px solid black;
-   border-radius: 6px;
+}
+
+.switch.dark {
+   left: calc(95% - 18px);
+   background-color: #000000;
+   border: 1px solid #ccc;
 }

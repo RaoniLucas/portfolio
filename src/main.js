@@ -1,15 +1,3 @@
-console.log("Olá mundo!");
+import Theme from './components/theme/theme.js';
 
-function test() {
-   console.log("Hello World!");
-}
-
-test();
-
-function testHTMLElement(text = "Hello World!") {
-   const span = document.createElement("span");
-   span.textContent = text;
-   return span;
-}
-
-document.body.appendChild(testHTMLElement());
+new Theme;
