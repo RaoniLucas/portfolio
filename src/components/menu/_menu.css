@@ -1,0 +1,21 @@
+.body.menu-hidden {
+   margin: 0;
+}
+
+.body.menu-active {
+   margin-left: 40px;
+}
+
+#menu-container {
+   height: 100dvh;
+   position: fixed;
+   border-right: 1px solid #ccc;
+}
+
+.menu-container.hidden {
+   left: -100px;
+}
+
+.menu-container.active {
+   left: 0;
+}
