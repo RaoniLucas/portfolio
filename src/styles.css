@@ -1,6 +1,7 @@
 /*@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-@import url('./components/menu/menu.css');
+@import url('./components/menu/_menu.css');
 
 html {
    scrollbar-width: thin;
@@ -46,7 +47,9 @@ body.dark header {
 }
 
 #name {
-   /**/
+   font-family: 'doto', sans-serif;
+   font-weight: 600;
+   letter-spacing: -1px;
 }
 
 .user-profile-container {
@@ -76,21 +79,31 @@ body.dark #menu-button:hover {
    background-color: #212121;
 }
 
+body.light #border-menu-icon {
+   stroke: #2B2B2B;
+}
+body.light #line-menu-icon {
+   fill: #2B2B2B;
+}
+body.light .details-menu-icon {
+   fill: #2B2B2B;
+}
+
 body.dark #border-menu-icon {
-   stroke: white;
+   stroke: #C4C4C4;
 }
 body.dark #line-menu-icon {
-   fill: white;
+   fill: #C4C4C4;
 }
 body.dark .details-menu-icon {
-   fill: white;
+   fill: #C4C4C4;
 }
 
 .switch-container {
    width: 40px;
    height: 20px;
    position: relative;
-   border-radius: 6px;
+   border-radius: 8px;
    display: flex;
    align-items: center;
    cursor: pointer;
@@ -99,12 +112,12 @@ body.dark .details-menu-icon {
 
 body.light .switch-container{
    background-color: #f0f0f0;
-   border: 1px solid black;
+   border: 1px solid #ccc;
 }
 
 body.dark .switch-container {
    background-color: #333333;
-   border: 1px solid #ccc;
+   border: 1px solid #5E5E5E;
 }
 
 .switch {
@@ -112,20 +125,20 @@ body.dark .switch-container {
    height: 16px;
    position: absolute;
    margin: 0 1px;
-   border-radius: 4px;
+   border-radius: 6px;
    transition: left 0.3s ease, background-color 0.3s ease;
 }
 
 .switch.light {
    left: 0;
    background-color: #ffffff;
-   border: 1px solid black;
+   border: 1px solid #ccc;
 }
 
 .switch.dark {
    left: calc(95% - 18px);
    background-color: #000000;
-   border: 1px solid #ccc;
+   border: 1px solid #5E5E5E;
 }
 
 main {
@@ -133,4 +146,33 @@ main {
    max-width: 1000px;
    margin: 0 auto;*/
    padding-top: 48px;
+}
+
+.home-section {
+   padding: 20px 0;
+   font-family: 'inter', sans-serif;
+}
+@media screen and (max-width: 1620px) {
+   .home-section {
+      padding: 8px 50px;
+   }
+}
+@media screen and (max-width: 675px) {
+   .home-section {
+      padding: 5px 20px;
+   }
+}
+
+.dynamic-interfaces__container {
+   max-width: 1500px;
+   margin: 0 auto;
+   display: flow-root;
+}
+
+.dynamic-interfaces__title {
+   font-weight: 600;
+}
+
+body.light .dynamic-interfaces__title {
+   color: #2B2B2B;
 }

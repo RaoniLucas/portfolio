@@ -3,5 +3,8 @@ export const menuListenerElements = () => {
       <nav>
          <ul></ul>
       </nav>
+      <footer class="footer-menu">
+         <a href="./">Sobre mim</a>
+      </footer>
    `;
 };

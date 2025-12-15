@@ -14,3 +14,4 @@ try {
 } catch {
    console.error('Falha ao inicar menu');
 }
+
