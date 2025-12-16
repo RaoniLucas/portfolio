@@ -5,25 +5,32 @@
 .body.menu-active {
    margin-left: 70px;
 }
+@media screen and (max-width: 675px) {
+   .body.menu-active {
+      margin: 0;
+   }
+}
 
 #menu-container {
-  height: 100dvh;
-  position: fixed;
-  top: 0;
-  display: flex;
-  flex-direction: column;
+   height: 100%;
+   position: fixed;
+   top: 0;
+   display: flex;
+   flex-direction: column;
 }
 
 #menu-container > nav {
-  flex-grow: 1;
+   flex-grow: 1;
 }
 
 body.light #menu-container {
+   background-color: white;
    border-right: 1px solid #ccc;
 }
 
 body.dark #menu-container {
-   border-right: 1px solid #5E5E5E;
+   background-color: #151515;
+   border-right: 1px solid #5e5e5e;
 }
 
 .menu-container.hidden {
@@ -33,9 +40,13 @@ body.dark #menu-container {
 .menu-container.active {
    left: 0;
 }
-
-/* Código em breve
-.footer-menu {
-   
+@media screen and (max-width: 500px) {
+   .menu-container.active {
+      width: 100%;
+   }
 }
-*/
+
+.footer-menu {
+   display: flex;
+   justify-content: center;
+}
