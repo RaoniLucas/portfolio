@@ -46,6 +46,53 @@ body.dark #menu-container {
    }
 }
 
+.header-menu {
+   position: static;
+}
+
+.switch-container {
+   width: 40px;
+   height: 20px;
+   position: relative;
+   border-radius: 8px;
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+body.light .switch-container{
+   background-color: #f0f0f0;
+   border: 1px solid #ccc;
+}
+
+body.dark .switch-container {
+   background-color: #212121;
+   border: 1px solid #5E5E5E;
+}
+
+.switch {
+   width: 16px;
+   height: 16px;
+   position: absolute;
+   margin: 0 1px;
+   border-radius: 6px;
+   transition: left 0.3s ease, background-color 0.3s ease;
+}
+
+.switch.light {
+   left: 0;
+   background-color: #ffffff;
+   border: 1px solid #ccc;
+}
+
+.switch.dark {
+   left: calc(95% - 18px);
+   background-color: #000000;
+   border: 1px solid #5E5E5E;
+}
+
+
 .footer-menu {
    display: flex;
    justify-content: center;

@@ -1,93 +1,158 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="theme-color" content="#FFFFF">
-	<script defer src="./src/main.js" type="module"></script>
-	<link rel="stylesheet" href="./src/styles.css">
-	<title>Raoni Lucas</title>
-</head>
-<body class="body">
-   <header>
-      <div class="header-container">
-         <div class="user-profile-container">
-            <button id="menu-button">
-               <svg width="20" height="20" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#clip0_34_9)">
-                     <rect id="border-menu-icon" x="3.5" y="3.5" width="93" height="93" rx="19.5" stroke="black" stroke-width="7"/>
-                     <rect id="line-menu-icon" x="35" width="7" height="100" fill="black"/>
-                     <rect class="details-menu-icon" x="11" y="19" width="20" height="7" rx="3.5" fill="black"/>
-                     <rect class="details-menu-icon" x="11" y="31" width="20" height="7" rx="3.5" fill="black"/>
-                     <rect class="details-menu-icon" x="11" y="43" width="20" height="7" rx="3.5" fill="black"/>
-                  </g>
-                  <defs>
-                     <clipPath id="clip0_34_9">
-                        <rect width="100" height="100" fill="white"/>
-                     </clipPath>
-                  </defs>
-               </svg>
-            </button>
-            <span id="name">Raoni Lucas</span>
-         </div>
-         
-         <span class="switch-container">
-            <div class="switch"></div>
-         </span>
-      </div>
-   </header>
-   <main>
-      <section class="home-section">
-         <div class="dynamic-interfaces__container">
-             <h2 class="dynamic-interfaces__title">Soluções para interfaces dinâmicas e responsivas</h2>
-             <div class="dynamic-interfaces__tools">
-                 <h3 class="tools__title">Ferramentas</h3>
-                 <div>
-                    <div>
-                       <h4>Front-End</h4>
-                       <ul class="front-end-tools__list">
-                           <li class="tools__item">HTML & CSS</li>
-                           <li class="tools__item">JavaScript</li>
-                           <li class="tools__item">React</li>
-                       </ul>
-                    </div>
-                    <div>
-                       <h4>Back-End</h4>
-                       <ul class="back-end-tools__list">
-                           <li class="tools__item">SQL</li>
-                           <li class="tools__item">Python</li>
-                           <li class="tools__item">Java</li>
-                       </ul>
-                    </div>
-                 </div>
-             </div>
-         </div>
-         <div>
-            <!--Apresentação pessoal em desenvolvimento...-->
-            <div>
-               <h3>Me chamo Raoni Lucas!</h3>
-               <p></p>
-            </div>
-            <div>
-               <div>
-                  <img src="" alt="">
-               </div>
-               <div>
-                  <ul>
-                     <li></li>
-                     <li></li>
-                     <li></li>
-                     <li></li>
-                  </ul>
-               </div>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="theme-color" content="#FFFFF" />
+      <script defer src="./src/main.js" type="module"></script>
+      <link rel="stylesheet" href="./src/styles.css" />
+      <title>Raoni Lucas</title>
+   </head>
+   <body class="body">
+      <header>
+         <div class="header-container">
+            <div class="user-profile-container">
+               <button id="menu-button">
+                  <svg
+                     width="20"
+                     height="20"
+                     viewBox="0 0 100 100"
+                     fill="none"
+                     xmlns="http://www.w3.org/2000/svg"
+                  >
+                     <g clip-path="url(#clip0_34_9)">
+                        <rect
+                           id="border-menu-icon"
+                           x="3.5"
+                           y="3.5"
+                           width="93"
+                           height="93"
+                           rx="19.5"
+                           stroke="black"
+                           stroke-width="7"
+                        />
+                        <rect
+                           id="line-menu-icon"
+                           x="35"
+                           width="7"
+                           height="100"
+                           fill="black"
+                        />
+                        <rect
+                           class="details-menu-icon"
+                           x="11"
+                           y="19"
+                           width="20"
+                           height="7"
+                           rx="3.5"
+                           fill="black"
+                        />
+                        <rect
+                           class="details-menu-icon"
+                           x="11"
+                           y="31"
+                           width="20"
+                           height="7"
+                           rx="3.5"
+                           fill="black"
+                        />
+                        <rect
+                           class="details-menu-icon"
+                           x="11"
+                           y="43"
+                           width="20"
+                           height="7"
+                           rx="3.5"
+                           fill="black"
+                        />
+                     </g>
+                     <defs>
+                        <clipPath id="clip0_34_9">
+                           <rect width="100" height="100" fill="white" />
+                        </clipPath>
+                     </defs>
+                  </svg>
+               </button>
+               <span id="name">Raoni Lucas</span>
             </div>
          </div>
-      </section>
+      </header>
       
-      <section>
-         <!-- Apresentação de Projetos -->
-      </section>
-   </main>
-   <footer></footer>
-</body>
+      <main>
+         <section class="interfaces">
+            <div class="interfaces__wrapper">
+               <h2 class="interfaces__title">
+                  Soluções para interfaces dinâmicas e responsivas
+               </h2>
+               
+               <div class="interfaces__columns">
+                  <!-- Coluna da esquerda -->
+                  <div class="interfaces__column">
+                     <div>
+                        <div class="tools">
+                           <h3 class="tools__title">Ferramentas</h3>
+
+                           <div class="tools__sections">
+                              <div>
+                                 <h4 class="tools__subtitle">Front-End</h4>
+                                 <ul class="tools__list">
+                                    <li class="tools__item">HTML & CSS</li>
+                                    <li class="tools__item">JavaScript</li>
+                                    <li class="tools__item">React</li>
+                                 </ul>
+                              </div>
+
+                              <div>
+                                 <h4 class="tools__subtitle">Back-End</h4>
+                                 <ul class="tools__list">
+                                    <li class="tools__item">SQL</li>
+                                    <li class="tools__item">Python</li>
+                                    <li class="tools__item">Java</li>
+                                 </ul>
+                              </div>
+                              
+                              <div>
+                                 <h4 class="tools__subtitle">Utilitários</h4>
+                                 <ul class="tools__list">
+                                    <li class="tools__item">Git</li>
+                                    <li class="tools__item">Jira</li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Coluna da direita -->
+                  <div class="interfaces__column interfaces__column--about">
+                     <!-- Apresentação pessoal em desenvolvimento... -->
+                     <div class="about__intro">
+                        <p class="about__text">Apresentação de minha trajetória em breve...</p>
+                     </div>
+
+                     <div class="about">
+                        <div class="about__image">
+                           <img src="" alt="Imagem em breve..." />
+                        </div>
+
+                        <div class="about__details">
+                           <ul class="about__list">
+                              <li class="about__item">Linkedin</li>
+                              <li class="about__item">Github</li>
+                              <li class="about__item"></li>
+                              <li class="about__item"></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <section>
+            <!-- Apresentação de Projetos -->
+         </section>
+      </main>
+      <footer></footer>
+   </body>
 </html>
