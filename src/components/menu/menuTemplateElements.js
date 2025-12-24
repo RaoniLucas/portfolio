@@ -16,7 +16,7 @@ export const menuListenerElements = () => {
          </ul>
       </nav>
       <footer class="footer-menu">
-         <a href="./">Sobre mim</a>
+         <a href="./" class="about-button">Sobre mim</a>
       </footer>
    `;
 };
