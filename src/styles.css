@@ -151,6 +151,11 @@ main {
    display: grid;
    grid-template-columns: repeat(2, 1fr);
 }
+@media screen and (max-width: 675px) {
+   .interfaces__columns {
+      grid-template-columns: 1fr;
+   }
+}
 
 .dynamic-interfaces__title {
    font-weight: 600;
