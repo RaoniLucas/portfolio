@@ -34,7 +34,7 @@ export default class Theme {
          document.head.appendChild(meta);
       }
       
-      meta.content = this.isDarkMode ? '#000000' : '#FFFFFF';
+      meta.content = this.isDarkMode ? '#000000' : '#151515';
       console.log('Cor da meta tag atualizada:', meta.content); // Saída para verificar as alterações
    }
    
