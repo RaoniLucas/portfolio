@@ -17,6 +17,9 @@ export default class Menu {
    }
    
    menuModal() {
+      this.menuButton.className = 'menu-button';
+      this.menuButton.classList.add('hidden');
+      
       this.menuContainer = document.createElement('div');
       this.menuContainer.id = 'menu-container';
       this.menuContainer.className = 'menu-container';
@@ -31,6 +34,9 @@ export default class Menu {
       
       this.bodyHTML.classList.toggle('menu-active', isActive);
       this.bodyHTML.classList.toggle('menu-hidden', !isActive);
+      
+      this.menuButton.classList.toggle('active', isActive)
+      this.menuButton.classList.toggle('hidden', !isActive)
       
       this.menuContainer.classList.toggle('active', isActive);
       this.menuContainer.classList.toggle('hidden', !isActive);

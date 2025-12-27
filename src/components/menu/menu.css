@@ -35,7 +35,7 @@ body.dark #menu-container {
 }
 
 .menu-container.hidden {
-   left: -124px;
+   left: -160px;
 }
 
 .menu-container.active {
@@ -127,6 +127,7 @@ body.dark .switch-container {
    border-radius: 8px;
    display: flex;
    align-items: center;
+   justify-content: space-between;
    font-family: 'Inter', sans-serif;
    font-size: 0.85em;
    cursor: pointer;
@@ -136,6 +137,17 @@ body.light .menu-option:hover {
 }
 body.dark .menu-option:hover {
    background-color: #292929;
+}
+.content-listitem {
+   display: flex;
+   align-items: center;
+   gap: 5px;
+}
+.body.light .content-listitem>svg>path {
+   fill: #292929;
+}
+.body.dark .content-listitem>svg>path {
+   fill: white;
 }
 
 .footer-menu {
