@@ -18,6 +18,7 @@
    display: flex;
    flex-direction: column;
    z-index: 1000;
+   transition: ease 80ms;
 }
 
 #menu-container > nav {
@@ -26,12 +27,12 @@
 
 body.light #menu-container {
    background-color: white;
-   border-right: 0.01em solid #ccc;
+   border-right: 0.05rem solid #ccc;
 }
 
 body.dark #menu-container {
    background-color: #151515;
-   border-right: 0.01em solid #5e5e5e;
+   border-right: 0.05rem solid #5e5e5e;
 }
 
 .menu-container.hidden {
@@ -69,6 +70,14 @@ body.dark #menu-container {
    align-items: center;
    cursor: pointer;
    transition: background-color 0.3s ease;
+}
+
+body.light .switch-container:hover {
+   background-color: #E6E6E6;
+}
+
+body.dark .switch-container:hover {
+   background-color: #262626;
 }
 
 body.light .switch-container{
@@ -110,21 +119,22 @@ body.dark .switch-container {
    font-family: 'Inter', sans-serif;
    font-size: 0.7em;
    font-weight: 400;
-   margin: 0;
+   margin: 0 5px;
    padding: 10px 0;
-   border-bottom: 0.01em solid #5e5e5e;
+   /*border-bottom: 0.01em solid #5e5e5e;*/
 }
 .menu-list {
    list-style: none;
-   margin: 14px 0;
+   margin: 5px 0;
    padding: 0;
    display: flex;
    flex-direction: column;
    gap: 5px;
 }
 .menu-option {
-   padding: 6px;
+   padding: 5px;
    border-radius: 8px;
+   border: 0.08rem solid transparent;
    display: flex;
    align-items: center;
    justify-content: space-between;
@@ -134,14 +144,16 @@ body.dark .switch-container {
 }
 body.light .menu-option:hover {
    background-color: #E6E6E6;
+   border: 0.08rem solid #D6D6D6;
 }
 body.dark .menu-option:hover {
    background-color: #292929;
+   border: 0.08rem solid #3B3B3B;
 }
 .content-listitem {
    display: flex;
    align-items: center;
-   gap: 5px;
+   gap: 7px;
 }
 .body.light .content-listitem>svg>path {
    fill: #292929;

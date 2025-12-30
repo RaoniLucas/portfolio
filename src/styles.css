@@ -11,7 +11,7 @@ body {
    height: 100dvh;
    position: relative;
    margin: 0;
-   transition: background-color 0.3s ease;
+   transition: background-color 0.3s ease, margin ease 80ms;
 }
 
 body.light {
@@ -64,7 +64,7 @@ body.dark header {
    width: 30px;
    height: 30px;
    margin: 0;
-   border: none;
+   border: 0.05rem solid transparent;
    border-radius: 6px;
    padding: 0;
    display: flex;
@@ -72,10 +72,11 @@ body.dark header {
    justify-content: center;
    cursor: pointer;
    z-index: 1000;
+   transition: ease 80ms;
 }
 @media screen and (max-width: 675px) {
-   #menu-button {
-   }
+   /*#menu-button {
+   }*/
    .menu-button.hidden {
       position: relative;
       left: 0;
@@ -89,11 +90,11 @@ body.dark header {
 
 body.light #menu-button:hover {
    background-color: #dedede;
-   border: 0.01rem solid silver;
+   border: 0.05rem solid #D9D9D9;
 }
 body.dark #menu-button:hover {
    background-color: #212121;
-   border: 0.01rem solid #2B2B2B;
+   border: 0.05rem solid #2B2B2B;
 }
 
 body.light #border-menu-icon {
@@ -127,6 +128,11 @@ main {
    padding: 20px 0;
    display: flow-root;
    font-family: 'Inter', sans-serif;
+}
+@media screen and (max-width: 1800px) {
+   .interfaces {
+      padding: 8px 50px;
+   }
 }
 @media screen and (max-width: 1620px) {
    .interfaces {
