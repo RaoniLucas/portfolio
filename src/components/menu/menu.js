@@ -3,10 +3,13 @@ import { menuListenerElements } from './menuTemplateElements.js';
 export default class Menu {
    constructor() {
       this.isOpen = false;
+      
       this.menuButton = document.getElementById('menu-button');
       this.menuContainer = null;
-      
       this.bodyHTML = document.querySelector('.body');
+      
+      this.scrollPosition = 0;
+      this.isMobile = false;
       
       this.init();
    }
@@ -14,6 +17,9 @@ export default class Menu {
    init() {
       this.menuModal();
       this.setupEvents();
+      
+      this.checkMobile();
+      this.setupResizeListener();
    }
    
    menuModal() {
@@ -40,6 +46,14 @@ export default class Menu {
       
       this.menuContainer.classList.toggle('active', isActive);
       this.menuContainer.classList.toggle('hidden', !isActive);
+      
+      if (this.isMobile) {
+         if (isActive) {
+            this.lockScroll();
+         } else {
+            this.unlockScroll();
+         }
+      }
    }
    
    toggleMenu() {
@@ -50,6 +64,49 @@ export default class Menu {
    setupEvents() {
       this.menuButton.addEventListener('click', () => {
          this.toggleMenu();
+      });
+   }
+   
+   
+   // Métodos utilitários para correção de bugs do menu
+   checkMobile() {
+      this.isMobile = window.innerWidth <= 675;
+      return this.isMobile;
+   }
+   
+   lockScroll() {
+      this.scrollPosition = window.pageYOffset;
+      
+      document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${this.scrollPosition}px`;
+      document.body.style.width = '100%';
+   }
+   
+   unlockScroll() {
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      
+      window.scrollTo(0, this.scrollPosition);
+   }
+   
+   setupResizeListener() {
+      let resizeTimeout;
+      window.addEventListener('resize', () => {
+         clearTimeout(resizeTimeout);
+         resizeTimeout = setTimeout(() => {
+            const wasMobile = this.isMobile;
+            this.checkMobile();
+            
+            if (this.isMobile && this.isOpen && !wasMobile) {
+               this.lockScroll();
+            }
+            else if (!this.isMobile && this.isOpen && wasMobile) {
+               this.unlockScroll();
+            }
+         }, 100);
       });
    }
 }
