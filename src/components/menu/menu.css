@@ -32,13 +32,15 @@
 }
 
 body.light #menu-container {
-   background-color: white;
-   border-right: 0.05rem solid #ccc;
+   /*background-color: white;*/
+   background-color: #f9fafb;
+   border-right: 0.05rem solid #EBEBEB;
 }
 
 body.dark #menu-container {
-   background-color: #151515;
-   border-right: 0.05rem solid #5e5e5e;
+   /*background-color: #151515;*/
+   background-color: #181818;
+   border-right: 0.05rem solid #2E2E2E;
 }
 
 .menu-container.hidden {
@@ -65,8 +67,10 @@ body.dark #menu-container {
 }
 .header-menu-container{
    margin: 0 20px;
+   width: 100%;
    display: flex;
    align-items: center;
+   /*border-bottom: 0.05rem solid #2E2E2E;*/
 }
 
 .switch-container {
@@ -148,6 +152,7 @@ body.dark .switch-container {
    justify-content: space-between;
    font-family: 'Inter', sans-serif;
    font-size: 0.85em;
+   user-select: none;
    cursor: pointer;
 }
 body.light .menu-option:hover {

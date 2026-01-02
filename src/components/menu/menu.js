@@ -1,4 +1,5 @@
 import { menuListenerElements } from './menuTemplateElements.js';
+// import Window from './components/window/window.js';
 
 export default class Menu {
    constructor() {
@@ -33,6 +34,29 @@ export default class Menu {
       this.menuContainer.innerHTML = menuListenerElements();
       
       document.body.insertAdjacentElement('afterbegin', this.menuContainer);
+      
+      this.setupMenuOptions();
+   }
+   
+   setupMenuOptions() {
+      const menuOption = [...document.querySelectorAll('.menu-option')];
+      menuOption.forEach((element, index) => {
+         element.addEventListener('click', () => {
+            switch (index) {
+               case 0:
+                  window.location.href = './index.html';
+                  break;
+               case 1:
+                  window.location.href = './pages/document.html';
+                  break;
+               case 2:
+                  // new Window;
+                  break
+               default:
+                  break;
+            }
+         });
+      });
    }
    
    updateMenu() {
@@ -68,7 +92,7 @@ export default class Menu {
    }
    
    
-   // Métodos utilitários para correção de bugs do menu
+   // Métodos utilitários para correção de responsividade
    checkMobile() {
       this.isMobile = window.innerWidth <= 675;
       return this.isMobile;
