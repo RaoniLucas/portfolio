@@ -26,3 +26,8 @@
   max-width: 500px;
   width: 90%;
 }
+
+body.dark .features {
+   background-color: silver;
+   color: black;
+}

@@ -40,8 +40,14 @@ export default class Menu {
          <div class="features">
             <header>
                <span>Informações em breve</span>
-               <button>Fechar</button>
+               <button style="cursor: pointer;">Fechar</button>
             </header>
+            <main>
+               <ul>
+                  <li>WhatsApp: </li>
+                  <li>Email: </li>
+               </ul>
+            </main>
          </div>
       `);
 
