@@ -1,13 +1,14 @@
 /*@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');*/
-@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
-@import url('./components/menu/menu.css');
+@import url("./components/menu/menu.css");
 
 html {
    scrollbar-width: thin;
 }
 @media screen and (max-width: 675px) {
-   html, body {
+   html,
+   body {
       height: 100%;
    }
 }
@@ -16,7 +17,9 @@ body {
    height: 100dvh;
    position: relative;
    margin: 0;
-   transition: background-color 0.3s ease, margin ease 80ms;
+   transition:
+      background-color 0.3s ease,
+      margin ease 80ms;
 }
 
 body.light {
@@ -53,7 +56,7 @@ body.dark header {
 }
 
 #name {
-   font-family: 'Doto', sans-serif;
+   font-family: "Doto", sans-serif;
    font-weight: 600;
    letter-spacing: -1px;
    user-select: none;
@@ -108,33 +111,50 @@ body.dark header {
 }
 
 body.light #menu-button:hover {
-   /*background-color: #dedede;*/
-   background-color: #E8E8E8;
-   border: 0.05rem solid #D9D9D9;
+   background-color: #e8e8e8;
+   border: 0.05rem solid #d9d9d9;
 }
 body.dark #menu-button:hover {
    background-color: #212121;
-   border: 0.05rem solid #2B2B2B;
+   border: 0.05rem solid #2b2b2b;
 }
 
 body.light #border-menu-icon {
-   stroke: #2B2B2B;
+   stroke: #737373;
 }
 body.light #line-menu-icon {
-   fill: #2B2B2B;
+   fill: #737373;
 }
 body.light .details-menu-icon {
-   fill: #2B2B2B;
+   fill: #737373;
+}
+body.light #menu-button:active #border-menu-icon {
+   stroke: black;
+}
+body.light #menu-button:active #line-menu-icon {
+   fill: black;
+}
+body.light #menu-button:active .details-menu-icon {
+   fill: black;
 }
 
 body.dark #border-menu-icon {
-   stroke: #C4C4C4;
+   stroke: #949494;
 }
 body.dark #line-menu-icon {
-   fill: #C4C4C4;
+   fill: #949494;
 }
 body.dark .details-menu-icon {
-   fill: #C4C4C4;
+   fill: #949494;
+}
+body.dark #menu-button:active #border-menu-icon {
+   stroke: white;
+}
+body.dark #menu-button:active #line-menu-icon {
+   fill: white;
+}
+body.dark #menu-button:active .details-menu-icon {
+   fill: white;
 }
 
 main {
@@ -147,7 +167,7 @@ main {
 .interfaces {
    padding: 20px 0;
    display: flow-root;
-   font-family: 'Inter', sans-serif;
+   font-family: "Inter", sans-serif;
 }
 @media screen and (max-width: 1800px) {
    .interfaces {
@@ -163,6 +183,10 @@ main {
    .interfaces {
       padding: 5px 20px;
    }
+}
+
+.interfaces__title {
+   font-size: 40px;
 }
 
 .interfaces__wrapper {
@@ -187,7 +211,7 @@ main {
 
 .interfaces__column--about {
    display: flex;
-   gap: 12px
+   gap: 12px;
 }
 
 .about {
@@ -209,13 +233,30 @@ main {
 }
 
 .about__item {
-   width: 40px;
-   height: 40px;
-   border: 0.05rem solid #F0F0F0;
+   max-width: 40px;
+   max-height: 40px;
+   width: 12vw;
+   height: 12vw;
    border-radius: 9px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
 }
-.about__item:hover {
-   background-color: slategray;
+body.light .about__item {
+   border: 0.05rem solid #f0f0f0;
+}
+body.light .about__item:hover {
+   background-color: #f0f0f0;
+}
+body.dark .about__item {
+   border: 0.05rem solid #212121;
+}
+body.dark .about__item:hover {
+   background-color: #212121;
+}
+body.dark .about__item svg path {
+   fill: white;
 }
 
 .about__text {
@@ -227,5 +268,5 @@ main {
 }
 
 body.light .dynamic-interfaces__title {
-   color: #2B2B2B;
+   color: #2b2b2b;
 }
