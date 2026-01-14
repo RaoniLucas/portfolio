@@ -37,17 +37,25 @@ export default class Menu {
 
       // Templates que serão retrabalhados 1
       const janelaContato = new Window(`
-         <div class="features">
-            <header>
-               <span>Informações em breve</span>
-               <button style="cursor: pointer;">Fechar</button>
-            </header>
-            <main>
-               <ul>
-                  <li>WhatsApp: </li>
-                  <li>Email: </li>
-               </ul>
-            </main>
+         <div class="contact-info">
+             <header class="contact-info__header">
+               <span class="contact-info__title">Contatos</span>
+               <button class="contact-info__close">Fechar</button>
+             </header>
+             <main class="contact-info__main">
+               <form class="contact-info__list">
+                  <label>Nome</label>
+                  <input placeholder="Primeiro Nome">
+                  <input placeholder="Segundo Nome">
+                  <label>Email</label>
+                  <input placeholder="Informe seu email">
+                  <label>Assunto</label>
+                  <input placeholder="Informe o assunto">
+                  <label>Mensagem</label>
+                  <textarea placeholder="Informe a mensagem"></textarea>
+                  <button>Enviar</button>
+               </form>
+             </main>
          </div>
       `);
 
@@ -103,7 +111,7 @@ export default class Menu {
 
    // Métodos utilitários para correção de responsividade
    checkMobile() {
-      this.isMobile = window.innerWidth <= 675;
+      this.isMobile = window.innerWidth <= 1010; //675px
       return this.isMobile;
    }
 

@@ -63,6 +63,7 @@ body.dark #menu-container {
 
 .header-menu {
    width: auto;
+   height: 48px;
    position: static;
    border-bottom: 0;
    display: flex;

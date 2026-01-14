@@ -1,0 +1,35 @@
+body.dark .contact-info {
+   background-color: silver;
+   color: black;
+}
+
+.contact-info {
+   border: 1px solid silver;
+   /*display: flex;
+   flex-direction: column;*/
+   font-family: 'Inter', sans-serif;
+}
+
+.contact-info__header {
+   width: auto;
+   height: auto;
+   position: relative;
+   border-bottom: 1px solid silver;
+   padding: 8px 18px;
+   display: flex;
+   justify-content: center;
+}
+.contact-info__close {
+   position: absolute;
+   left: 0;
+   margin-left: 8px;
+}
+
+.contact-info__main {
+   padding: 0;
+}
+.contact-info__list {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}

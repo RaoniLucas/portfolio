@@ -1,3 +1,5 @@
+@import url('./_windowContact.css');
+
 .modal {
   position: fixed;
   top: 0;
@@ -21,13 +23,8 @@
 
 .modal > * {
   background: white;
-  padding: 2rem;
-  border-radius: 8px;
+  /*padding: 1rem;*/
+  border-radius: 18px;
   max-width: 500px;
   width: 90%;
-}
-
-body.dark .features {
-   background-color: silver;
-   color: black;
 }
