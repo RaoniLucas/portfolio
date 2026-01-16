@@ -36,28 +36,34 @@ export default class Menu {
       document.body.insertAdjacentElement("afterbegin", this.menuContainer);
 
       // Templates que serão retrabalhados 1
-      const janelaContato = new Window(`
-         <div class="contact-info">
-             <header class="contact-info__header">
-               <span class="contact-info__title">Contatos</span>
-               <button class="contact-info__close">Fechar</button>
-             </header>
-             <main class="contact-info__main">
-               <form class="contact-info__list">
-                  <label>Nome</label>
-                  <input placeholder="Primeiro Nome">
-                  <input placeholder="Segundo Nome">
-                  <label>Email</label>
-                  <input placeholder="Informe seu email">
-                  <label>Assunto</label>
-                  <input placeholder="Informe o assunto">
-                  <label>Mensagem</label>
-                  <textarea placeholder="Informe a mensagem"></textarea>
-                  <button>Enviar</button>
-               </form>
-             </main>
-         </div>
-      `);
+      const janelaContato = new Window(
+         `
+            <div class="contact-info">
+               <header class="contact-info__header">
+                  <span class="contact-info__title">Contatos</span>
+                  <button class="contact-info__close">Fechar</button>
+               </header>
+               <main class="contact-info__main">
+                  <form class="contact-info__list">
+                     <label for="firstName">Nome</label>
+                     <input id="firstName" type="text" placeholder="Primeiro Nome" name="firstName">
+                     <input id="lastName" type="text" placeholder="Segundo Nome" name="lastName">
+                     
+                     <label for="email">Email</label>
+                     <input id="email" type="email" placeholder="Informe seu email" name="email">
+                     
+                     <label for="subject">Assunto</label>
+                     <input id="subject" type="text" placeholder="Informe o assunto" name="subject">
+                     
+                     <label for="message">Mensagem</label>
+                     <textarea id="message" placeholder="Informe a mensagem" name="message"></textarea>
+                     
+                     <button type="submit">Enviar</button>
+                  </form>
+               </main>
+            </div>
+         `,
+      );
 
       const menuOption = [...document.querySelectorAll(".menu-option")];
       menuOption.forEach((element, index) => {
@@ -70,6 +76,9 @@ export default class Menu {
                   window.location.href = "./pages/document.html";
                   break;
                case 2:
+                  if (this.isOpen) {
+                     this.toggleMenu(); // fecha o menu
+                  }
                   janelaContato.toggle();
                   break;
             }

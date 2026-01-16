@@ -6,8 +6,6 @@ export default class Window {
 
    toggle() {
       this.modal?.classList.toggle("ativo") || this.criar();
-      
-      // Toggle para fechar menu em breve
    }
 
    criar() {
@@ -17,9 +15,28 @@ export default class Window {
          typeof this.conteudo === "function" ? this.conteudo() : this.conteudo;
 
       document.body.appendChild(this.modal);
-
-      this.modal.onclick = (e) => e.target === this.modal && this.fechar();
-      document.onkeydown = (e) => e.key === "Escape" && this.fechar();
+      
+      this.modal.addEventListener("click", (e) => {
+         if (e.target.closest(".contact-info__close")) {
+            this.fechar();
+            return;
+         }
+         
+         if (e.target === this.modal) {
+            this.fechar();
+         }
+      });
+   
+      // Zona especial...
+      document.addEventListener("keydown", (e) => {
+         const tag = document.activeElement.tagName;
+         if (tag === "INPUT" || tag === "TEXTAREA") return;
+   
+         if (e.key === "Escape") {
+            this.fechar();
+         }
+      });
+      //
 
       this.modal.offsetWidth;
       this.modal.classList.add("ativo");
