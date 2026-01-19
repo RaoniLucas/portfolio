@@ -1,13 +1,3 @@
-/* ========== ERROS IDENTIFICADOS ========== */
-/* 
-ERRO 1: Seletores :nth-child() incorretos - não correspondem ao HTML
-ERRO 2: .contact-info__main comentado impede visualização
-ERRO 3: gap: 20px comentado remove espaçamento entre elementos
-ERRO 4: resize: none no textarea impede redimensionamento
-ERRO 5: width: 100% removido dos inputs/textarea
-ERRO 6: padding: 14px 16px comentado nos inputs
-*/
-
 /* ========== ESTILOS GERAIS DO COMPONENTE ========== */
 .contact-info {
    background-color: white;
@@ -75,7 +65,7 @@ body.dark .contact-info {
    transform: scale(1.05);
 }
 
-/* ========== CONTEÚDO PRINCIPAL (COMENTADO - ERRO) ========== */
+/* ========== CONTEÚDO PRINCIPAL ========== */
 /*
 .contact-info__main {
    padding: 30px;
@@ -120,7 +110,7 @@ input::placeholder, textarea::placeholder {
    color: #a0a7b3;
 }
 
-/* ========== POSICIONAMENTO DOS ELEMENTOS NO GRID (COM ERROS) ========== */
+/* ========== POSICIONAMENTO DOS ELEMENTOS NO GRID ========== */
 .contact-info__list label:nth-child(1) {
    grid-column: 1 / span 2;
 }
@@ -188,7 +178,6 @@ input::placeholder, textarea::placeholder {
       grid-template-columns: 1fr;
    }
 
-   /* ERRO: Seletores incorretos - não correspondem ao HTML */
    .contact-info__list label:nth-child(1),
    .contact-info__list input:nth-child(2),
    .contact-info__list input:nth-child(3),
