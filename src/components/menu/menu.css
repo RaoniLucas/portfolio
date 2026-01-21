@@ -197,6 +197,7 @@ body.dark .footer-menu {
    flex-grow: 1;
    text-align: center;
    text-decoration: none;
+   cursor: pointer;
 }
 body.light .about-button {
    border: 1px solid #D6D6D6;
