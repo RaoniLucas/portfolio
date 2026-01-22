@@ -97,9 +97,9 @@ body.dark .contact-info__title {
 /* ========== LABELS DOS CAMPOS ========== */
 label {
    color: #8A8A8A;
-   margin: 7px 0;
+   margin: 7px 0 3px 0;
    display: block;
-   font-size: 0.85rem;
+   font-size: 0.80rem;
    font-weight: 400;
 }
 
