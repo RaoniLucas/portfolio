@@ -32,7 +32,6 @@ body.dark .contact-info {
    grid-template-columns: 1fr auto;
    align-items: center;
    background: white;
-   color: white;
 }
 
 body.dark .contact-info__header {
@@ -47,7 +46,7 @@ body.dark .contact-info__header {
    text-align: center;
 }
 body.light .contact-info__title {
-   color: black;
+   color: silver;
 }
 body.dark .contact-info__title {
    color: silver; /* Por enquanto */
@@ -91,7 +90,7 @@ body.dark .contact-info__title {
    padding: 0;
    display: grid;
    grid-template-columns: repeat(2, 1fr);
-   gap: 6px;
+   gap: 10px;
 }
 
 /* ========== LABELS DOS CAMPOS ========== */
@@ -107,10 +106,26 @@ label {
 input, textarea {
    padding: 10px 12px;
    border-radius: 8px;
+   border: none;
    font-family: 'Inter', sans-serif;
    font-size: 0.8rem;
    font-weight: 500;
    /*transition: all 0.3s;*/
+}
+
+body.light input {
+   background-color: white;
+   color: black;
+}
+body.light textarea {
+   background-color: white;
+}
+body.dark input {
+   background-color: #2E2E2E;
+   color: white;
+}
+body.dark textarea {
+   background-color: #2E2E2E;
 }
 
 input:focus, textarea:focus {
@@ -120,19 +135,6 @@ input:focus, textarea:focus {
 input::placeholder, textarea::placeholder {
    color: #747982;
 }
-
-body.light input, textarea {
-   /*background-color: #4A4A4A;
-   border: 1px solid #4F4F4F;*/
-}
-
-body.dark input, textarea {
-   background-color: #2E2E2E;
-   /*border: 1px solid #4F4F4F;*/
-   border: none;
-   color: white;
-}
-
 /* ========== POSICIONAMENTO DOS ELEMENTOS NO GRID ========== */
 .contact-info__list label:nth-child(1) {
    grid-column: 1 / span 2;
@@ -181,7 +183,7 @@ body.dark input, textarea {
    padding: 11px;
    border-radius: 8px;
    font-size: 0.9rem;
-   font-weight: 600;
+   font-weight: 500;
    cursor: pointer;
    margin-top: 10px;
 }
