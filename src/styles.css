@@ -215,6 +215,10 @@ main {
    gap: 12px;
 }
 
+.tools__sections {
+   display: flex;
+}
+
 .about {
    display: flex;
    gap: 12px;
