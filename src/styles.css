@@ -23,7 +23,7 @@ body {
 }
 
 body.light {
-   background-color: #ffffff;
+   background-color: #f7f7f4;
    color: #000000;
 }
 
@@ -111,7 +111,7 @@ body.dark header {
 }
 
 body.light #menu-button:hover {
-   background-color: #e8e8e8;
+   background-color: #dddbd3;
    border: 0.05rem solid #d9d9d9;
 }
 body.dark #menu-button:hover {

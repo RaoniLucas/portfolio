@@ -43,17 +43,16 @@ export default class Menu {
          element.addEventListener("click", () => {
             switch (index) {
                case 0:
-                  window.location.href = "./pages/features.html";
-                  break;
-               case 1:
-                  window.location.href = "./pages/document.html";
-                  break;
-               case 2:
                   if (this.isOpen) {
                      this.toggleMenu(); // fecha o menu
                   }
                   janelaContato.toggle();
                   break;
+               case 1:
+                  window.location.href = "./pages/document.html";
+                  break;
+               case 2:
+               // Em breve...
             }
          });
       });
