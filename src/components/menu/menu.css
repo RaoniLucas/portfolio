@@ -125,7 +125,7 @@ body.dark .switch-container {
 
 .switch.dark {
    left: calc(95% - 18px);
-   background-color: #000000;
+   background-color: #0f0f0f;
    border: 1px solid #353535;
 }
 
@@ -181,6 +181,12 @@ body.dark .menu-option:hover {
 .body.dark .content-listitem > svg > path {
    fill: #cecece;
 }
+.body.light .arrow-icon > .line-arrow-icon {
+   /**/
+}
+.body.dark .arrow-icon > .line-arrow-icon {
+   fill: #4f4f4f;
+}
 
 .body.light .menu-option > .content-listitem > .text-option {
    color: #686764;
@@ -219,7 +225,7 @@ body.light .about-button:hover {
    background-color: #e6e6e6;
 }
 body.dark .about-button {
-   border: 1px solid #2e2e2e;
+   border: 1px solid #222;
    color: #686868;
 }
 body.dark .about-button:hover {

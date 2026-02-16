@@ -218,6 +218,12 @@ main {
 .tools__sections {
    display: flex;
 }
+.tools__title {
+   margin: 0;
+}
+.tools__div {
+   flex-grow: 1;
+}
 
 .about {
    display: flex;
