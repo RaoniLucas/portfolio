@@ -2,7 +2,6 @@ export const windowContact = () => {
    return `
       <div class="contact-info">
          <header class="contact-info__header">
-
             <button class="contact-info__close">Fechar</button>
          </header>
          <main class="contact-info__main">
