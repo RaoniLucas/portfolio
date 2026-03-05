@@ -21,4 +21,6 @@ Um site portfólio moderno e responsivo que destaca minha trajetória profission
 
 ## 📁 Estrutura do Projeto
 
-...
+```
+/* Em breve... */
+```
