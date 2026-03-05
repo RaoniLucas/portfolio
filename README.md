@@ -1,9 +1,5 @@
-# Raoni Lucas  
-## Desenvolvedor de Software
-
-Este é o repositório do meu portfólio profissional, desenvolvido com tecnologias web padrão para apresentar meus projetos, habilidades e experiências como desenvolvedor.
-
-## ✨ Visão Geral
+## Visão Geral
+> Este é o repositório do meu portfólio profissional, desenvolvido com tecnologias web padrão para apresentar meus projetos, habilidades e experiências como desenvolvedor.
 
 Um site portfólio moderno e responsivo que destaca minha trajetória profissional, projetos técnicos e competências em desenvolvimento de software.
 
